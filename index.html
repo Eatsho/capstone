@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoLearn | Algorithms and Data Structure Class 9 DTI Education</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        bhutan: {
+                            gold: '#D97706',
+                            blue: '#1D4ED8',
+                            emerald: '#059669',
+                            maroon: '#991B1B',
+                            bgLight: '#FAFAFA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Plus Jakarta Sans, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.top-\[41px\]{top:41px}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-2\.5{height:0.625rem}.h-20{height:5rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-80{height:20rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-20{width:5rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-xl{max-width:36rem}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-10{gap:2.5rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-3\.5{gap:0.875rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-10 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138 / var(--tw-border-opacity, 1))}.border-amber-200\/60{border-color:rgb(253 230 138 / 0.6)}.border-amber-200\/80{border-color:rgb(253 230 138 / 0.8)}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-blue-200\/60{border-color:rgb(191 219 254 / 0.6)}.border-blue-200\/80{border-color:rgb(191 219 254 / 0.8)}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-emerald-200\/60{border-color:rgb(167 243 208 / 0.6)}.border-emerald-200\/80{border-color:rgb(167 243 208 / 0.8)}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-200\/60{background-color:rgb(253 230 138 / 0.6)}.bg-amber-50\/50{background-color:rgb(255 251 235 / 0.5)}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-200\/60{background-color:rgb(191 219 254 / 0.6)}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-50\/50{background-color:rgb(239 246 255 / 0.5)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-200\/60{background-color:rgb(167 243 208 / 0.6)}.bg-emerald-50\/50{background-color:rgb(236 253 245 / 0.5)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-amber-500{--tw-gradient-from:#f59e0b var(--tw-gradient-from-position);--tw-gradient-to:rgb(245 158 11 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-50{--tw-gradient-from:#f8fafc var(--tw-gradient-from-position);--tw-gradient-to:rgb(248 250 252 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-950\/80{--tw-gradient-from:rgb(2 6 23 / 0.8) var(--tw-gradient-from-position);--tw-gradient-to:rgb(2 6 23 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-blue-600{--tw-gradient-to:rgb(37 99 235 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #2563eb var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-amber-50\/30{--tw-gradient-to:rgb(255 251 235 / 0.3) var(--tw-gradient-to-position)}.to-emerald-600{--tw-gradient-to:#059669 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-3\.5{padding:0.875rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-heading{font-family:Outfit, sans-serif}.font-sans{font-family:Plus Jakarta Sans, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-amber-100 *::selection{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.selection\:text-amber-900 *::selection{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.selection\:bg-amber-100::selection{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.selection\:text-amber-900::selection{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.hover\:border-amber-400:hover{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.hover\:border-blue-400:hover{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.hover\:border-emerald-400:hover{--tw-border-opacity:1;border-color:rgb(52 211 153 / var(--tw-border-opacity, 1))}.hover\:bg-amber-600:hover{--tw-bg-opacity:1;background-color:rgb(217 119 6 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-500:hover{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:text-amber-600:hover{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.hover\:text-blue-600:hover{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.hover\:text-emerald-600:hover{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.hover\:opacity-90:hover{opacity:0.9}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:h-96{height:24rem}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:p-10{padding:2.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-16{padding-top:4rem;padding-bottom:4rem}}</style>
+<style id="algolearn-pathway-photo-styles">
+#methods .grid > div img { display:block; width:100%; max-width:100%; object-fit:cover; }
+#methods .grid > div .overflow-hidden { width:100%; }
+@media (max-width: 640px) {
+  #methods .grid > div img { height: 15rem; }
+}
+</style>
+
+
+<style id="algolearn-preserve-punakha-and-pathway-photos">
+#quiz .quiz-image-background .space-y-6 > div:not(#quiz-result-box) {
+  background-color: rgba(255,255,255,.60) !important;
+  backdrop-filter: blur(1px);
+}
+#quiz .quiz-image-background label {
+  background-color: rgba(248,250,252,.70) !important;
+}
+#quiz .quiz-image-background > .text-center {
+  background-color: rgba(255,255,255,.42) !important;
+  border-radius: 1rem;
+  padding: .5rem;
+}
+#methods .grid > div img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+#methods .grid > div .overflow-hidden { width: 100%; }
+@media (max-width: 640px) {
+  #methods .grid > div img { height: 15rem; }
+}
+</style>
+
+
+<style id="algolearn-educator-photo-updates">
+#creators .drop-zone img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+#creators .grid { align-items:stretch; }
+#creators .grid > div { min-width:0; }
+</style>
+
+
+<style id="algolearn-final-profile-photo-layout">
+#creators .drop-zone img,
+#creators img[id^="cms-creator"] {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+</style>
+
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-amber-100 selection:text-amber-900 admin-mode">
+
+    <!-- Bhutanese Cultural Pattern Top Bar -->
+    <div class="h-2.5 w-full bg-gradient-to-r from-amber-500 via-blue-600 to-emerald-600"></div>
+
+    <!-- Mode Banner & Floating Controls Bar -->
+    
+
+    <header class="bg-white border-b border-slate-100 shadow-sm sticky top-[41px] z-40 backdrop-blur-md bg-white/95">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Website Logo & Title -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 via-blue-600 to-emerald-600 flex items-center justify-center text-white text-xl shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div>
+                        <span class="block font-heading font-extrabold text-lg sm:text-xl text-slate-900 group-hover:text-blue-600 transition-colors">
+                            AlgoLearn
+                        </span>
+                        <span class="block text-xs font-semibold text-amber-600 tracking-wider uppercase">Algorithms and Data Structure Class 9 DTI Education • Bhutan 🇧🇹</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Bar -->
+                <nav class="hidden lg:flex items-center space-x-1 text-xs font-bold">
+                    <a href="#hero" class="px-3.5 py-2 text-blue-600 bg-blue-50 rounded-xl transition-all">Home</a>
+                    <a href="#quiz" class="px-3.5 py-2 text-slate-600 hover:text-amber-600 hover:bg-slate-50 rounded-xl transition-all">Learner Quiz</a>
+                    <a href="#ple" class="px-3.5 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-all">PLE Info</a>
+                    <a href="#methods" class="px-3.5 py-2 text-slate-600 hover:text-emerald-600 hover:bg-slate-50 rounded-xl transition-all">Learning Methods</a>
+                    <a href="#creators" class="px-3.5 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-all">Creators</a>
+                    <a href="#contact" class="px-3.5 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-all">Contact</a>
+                </nav>
+
+                <!-- Mobile Navigation Button -->
+                <button onclick="toggleMobileNav()" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-nav" class="hidden lg:hidden border-b border-slate-100 bg-white px-4 py-4 space-y-2 text-sm font-semibold">
+            <a href="#hero" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-blue-600 bg-blue-50">Home</a>
+            <a href="#quiz" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Learner Quiz</a>
+            <a href="#ple" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">PLE Info</a>
+            <a href="#methods" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Learning Methods</a>
+            <a href="#creators" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Creators</a>
+            <a href="#contact" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- SECTION 1: HERO / WELCOME SECTION -->
+        <section id="hero" class="py-12 lg:py-16 bg-slate-50 relative overflow-hidden border-b border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-200 shadow-sm">
+                            🇧🇹 Class 9 DTI Curriculum
+                        </div>
+                        
+                        <h1 id="cms-hero-title" class="editable-text font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
+                            Welcome Class 9 Students: Master Searching Algorithms Your Way!
+                        </h1>
+                        
+                        <p id="cms-hero-desc" class="editable-text text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Welcome to the Personal Learning Environment (PLE) designed specifically for Class 9 students in Bhutan studying Algorithms and Data Structures. Every student's brain processes information differently—explore searching algorithms through the learning style that fits you best without any pressure or judgment!
+                        </p>
+
+                        <!-- Inclusive Pathways Summary Cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                            <a href="#methods" class="p-3.5 rounded-2xl border border-amber-200 bg-white hover:border-amber-400 transition-all shadow-sm">
+                                <i class="fa-solid fa-eye text-amber-500 text-lg mb-1"></i>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Visual Path</h4>
+                                <p class="text-[11px] text-slate-500">Diagrams &amp; flowchart step visualizers</p>
+                            </a>
+                            <a href="#methods" class="p-3.5 rounded-2xl border border-blue-200 bg-white hover:border-blue-400 transition-all shadow-sm">
+                                <i class="fa-solid fa-headphones text-blue-500 text-lg mb-1"></i>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Audio Path</h4>
+                                <p class="text-[11px] text-slate-500">Dzong story podcast &amp; radio breakdowns</p>
+                            </a>
+                            <a href="#methods" class="p-3.5 rounded-2xl border border-emerald-200 bg-white hover:border-emerald-400 transition-all shadow-sm">
+                                <i class="fa-solid fa-gamepad text-emerald-600 text-lg mb-1"></i>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Game Path</h4>
+                                <p class="text-[11px] text-slate-500">Interactive Dzong relic search quests</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Drag & Drop Image Slot: Students & Bhutan Culture -->
+                    <div class="lg:col-span-5">
+                        <div class="drop-zone relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100" id="dropzone-hero-img">
+                            <img id="cms-hero-img" src="assets/image_01.png" alt="Class 9 students at school" class="w-full h-80 sm:h-96 object-cover" onerror="this.src='https://placehold.co/800x600/1d4ed8/ffffff?text=Class+9+Bhutanese+Students';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent p-5 flex flex-col justify-end text-white pointer-events-none">
+                                <span class="text-[10px] font-bold text-amber-300 uppercase tracking-widest">Inclusive Education Bhutan</span>
+                                <h4 id="cms-hero-img-caption" class="editable-text font-heading font-bold text-base">Class 9 Students</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: INTERACTIVE LEARNER TYPE QUIZ -->
+        <section id="quiz" class="py-14 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="quiz-image-background border-2 border-amber-200 rounded-3xl p-6 sm:p-10 shadow-lg space-y-8" style="background-image: linear-gradient(rgba(255,255,255,.28), rgba(255,255,255,.28)), url('assets/image_02.png') !important; background-size: cover !important; background-position: center center !important; background-repeat: no-repeat !important; background-color: transparent !important;">
+                    
+                    <div class="text-center max-w-xl mx-auto space-y-2">
+                        <span class="px-3.5 py-1 bg-amber-100 text-amber-900 text-xs font-bold rounded-full border border-amber-200">Interactive Discovery</span>
+                        <h2 id="cms-quiz-title" class="editable-text font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
+                            🔍 What Type of Learner Are You?
+                        </h2>
+                        <p id="cms-quiz-subtitle" class="editable-text text-slate-600 text-xs sm:text-sm">
+                            Answer these 4 friendly questions to discover your natural learning superpower and unlock your ideal algorithm study path!
+                        </p>
+                    </div>
+
+                    <!-- Interactive Quiz Form -->
+                    <div class="space-y-6">
+                        <!-- Q1 -->
+                        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+                            <h3 id="cms-q1-text" class="editable-text font-bold text-slate-900 text-xs sm:text-sm">1. When studying Binary Search versus Linear Search, what helps you understand best?</h3>
+                            <div class="space-y-2 text-xs">
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q1" value="visual" class="text-blue-600 focus:ring-blue-500">
+                                    <span>Looking at animated arrays, flowcharts, and color-coded diagrams.</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q1" value="audio" class="text-blue-600 focus:ring-blue-500">
+                                    <span>Listening to a spoken library story podcast explaining the logic.</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q1" value="game" class="text-blue-600 focus:ring-blue-500">
+                                    <span>Opening mystery chest boxes in an interactive quest to find secret relics.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+                            <h3 id="cms-q2-text" class="editable-text font-bold text-slate-900 text-xs sm:text-sm">2. How do you prepare before an ICT computer science assessment?</h3>
+                            <div class="space-y-2 text-xs">
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q2" value="visual" class="text-blue-600 focus:ring-blue-500">
+                                    <span>Drawing mind maps and highlighting key algorithm steps.</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q2" value="audio" class="text-blue-600 focus:ring-blue-500">
+                                    <span>Explaining the steps out loud or discussing them with a friend.</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q2" value="game" class="text-blue-600 focus:ring-blue-500">
+                                    <span>Solving interactive quiz puzzles and completing timed challenges.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+                            <h3 id="cms-q3-text" class="editable-text font-bold text-slate-900 text-xs sm:text-sm">3. What is your favorite hobby outside of class?</h3>
+                            <div class="space-y-2 text-xs">
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q3" value="visual" class="text-blue-600 focus:ring-blue-500">
+                                    <span>Art, video editing, graphic design, or watching tutorials.</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q3" value="audio" class="text-blue-600 focus:ring-blue-500">
+                                    <span>Listening to radio, podcasting, traditional music, or storytelling.</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q3" value="game" class="text-blue-600 focus:ring-blue-500">
+                                    <span>Playing puzzle video games, strategy board games, or archery.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+                            <h3 id="cms-q4-text" class="editable-text font-bold text-slate-900 text-xs sm:text-sm">4. How do you feel when you encounter a complex programming problem?</h3>
+                            <div class="space-y-2 text-xs">
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q4" value="visual" class="text-blue-600 focus:ring-blue-500">
+                                    <span>I need to see example outputs and trace table diagrams.</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q4" value="audio" class="text-blue-600 focus:ring-blue-500">
+                                    <span>I want someone to talk me through the logic step-by-step.</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 cursor-pointer">
+                                    <input type="radio" name="q4" value="game" class="text-blue-600 focus:ring-blue-500">
+                                    <span>I want to jump in, try different inputs hands-on, and learn by trial.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button onclick="calculateQuiz()" class="w-full py-3.5 bg-gradient-to-r from-amber-500 via-blue-600 to-emerald-600 hover:opacity-90 text-white font-bold rounded-2xl shadow-md text-xs sm:text-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-sparkles"></i> Discover My Learner Superpower
+                        </button>
+                    </div>
+
+                    <!-- Quiz Result Box -->
+                    <div id="quiz-result-box" class="hidden p-6 rounded-2xl text-center space-y-3 border-2 transition-all"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PERSONAL LEARNING ENVIRONMENT (PLE) INFO SECTION -->
+        <section id="ple" class="py-14 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span class="px-3.5 py-1 bg-blue-100 text-blue-900 text-xs font-bold rounded-full uppercase border border-blue-200">Educational Autonomy</span>
+                    <h2 id="cms-ple-title" class="editable-text font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
+                        What is a Personal Learning Environment (PLE)?
+                    </h2>
+                    <p id="cms-ple-subtitle" class="editable-text text-slate-600 text-sm leading-relaxed">
+                        A Personal Learning Environment gives YOU full control over how you absorb knowledge. Instead of forcing everyone to read identical textbook lines, our ICT platform lets you choose whether to WATCH visual animations, LISTEN to audio stories, or PLAY algorithm quests!
+                    </p>
+                </div>
+
+                <!-- 3 Pillars of PLE -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-3xl bg-white border border-amber-200/80 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+                        <div class="w-full h-36 rounded-2xl overflow-hidden bg-slate-100"><img src="assets/image_03.jpg" alt="Autonomy and Choice" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=download&id=1QKLklaZ9Sa52w0PiWvu-Jk0UUyWXaRd4'"></div>
+                        <h3 id="cms-ple-p1-title" class="editable-text font-bold text-slate-900 text-base">Autonomy &amp; Choice</h3>
+                        <p id="cms-ple-p1-desc" class="editable-text text-xs text-slate-600 leading-relaxed">
+                            Select any lesson format that feels natural to your brain today. Switch modes anytime without losing progress!
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-white border border-blue-200/80 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+                        <div class="w-full h-36 rounded-2xl overflow-hidden bg-slate-100"><img src="assets/image_04.jpg" alt="Multi-Modal Learning" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=download&id=1_-h4Wqk9E9KfFB1XLrumV_xg77TdRjKe'"></div>
+                        <h3 id="cms-ple-p2-title" class="editable-text font-bold text-slate-900 text-base">Multi-Modal Learning</h3>
+                        <p id="cms-ple-p2-desc" class="editable-text text-xs text-slate-600 leading-relaxed">
+                            Combine visual block diagrams, radio podcasts, and interactive code quests for deeper understanding.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-white border border-emerald-200/80 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+                        <div class="w-full h-36 rounded-2xl overflow-hidden bg-slate-100"><img src="assets/image_05.png" alt="Self-Paced Growth" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=download&id=1wQatq5gzX5E7MKDJU9ehLGkl2wwGk6td'"></div>
+                        <h3 id="cms-ple-p3-title" class="editable-text font-bold text-slate-900 text-base">Self-Paced Growth</h3>
+                        <p id="cms-ple-p3-desc" class="editable-text text-xs text-slate-600 leading-relaxed">
+                            Zero discrimination and zero anxiety. Master searching algorithms at your own speed with full confidence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: LEARNING METHODS OVERVIEW BOARD -->
+        <section id="methods" class="py-14 bg-white border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span class="px-3.5 py-1 bg-emerald-100 text-emerald-900 text-xs font-bold rounded-full uppercase border border-emerald-200">Curriculum Pathways</span>
+                    <h2 id="cms-methods-title" class="editable-text font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
+                        Choose Your Algorithm Learning Method
+                    </h2>
+                    <p id="cms-methods-subtitle" class="editable-text text-slate-600 text-sm leading-relaxed">
+                        Explore how Linear Search and Binary Search are taught across three distinct interactive pathways.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Visual Card -->
+                    <div class="bg-amber-50/50 rounded-3xl p-6 border-2 border-amber-200 space-y-4 flex flex-col justify-between hover:shadow-lg transition-all">
+                        <div class="space-y-3">
+                            <div class="w-full mb-3 overflow-hidden rounded-2xl border border-slate-200 shadow-sm bg-white"><img src="assets/image_06.png" alt="Visual pathway: student presenting visual learning materials" class="w-full h-56 sm:h-64 object-cover object-center" loading="eager" style="display:block; width:100%; max-width:100%; object-fit:cover; object-position:center;"></div>
+                            <span class="text-[10px] font-extrabold text-amber-700 bg-amber-200/60 px-2.5 py-1 rounded-full uppercase">Visual Pathway</span>
+                            <h3 id="cms-m1-title" class="editable-text font-heading font-bold text-slate-900 text-lg">Visual Diagram &amp; Animation Path</h3>
+                            <p id="cms-m1-desc" class="editable-text text-xs text-slate-600 leading-relaxed">
+                                Perfect for students who love graphics! See arrays split in half during Binary Search, watch pointers step through elements in Linear Search, and view flowcharts.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-slate-700 space-y-2 border-t border-amber-200/60 pt-3">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Color-coded array visualizers</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Flowchart decision diamonds</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Video explainers &amp; diagrams</li>
+                        </ul>
+                    </div>
+
+                    <!-- Audio Card -->
+                    <div class="bg-blue-50/50 rounded-3xl p-6 border-2 border-blue-200 space-y-4 flex flex-col justify-between hover:shadow-lg transition-all">
+                        <div class="space-y-3">
+                            <div class="w-full mb-3 overflow-hidden rounded-2xl border border-slate-200 shadow-sm bg-white"><img src="assets/image_07.png" alt="Audio pathway: student using headphones for audio learning" class="w-full h-56 sm:h-64 object-cover object-center" loading="eager" style="display:block; width:100%; max-width:100%; object-fit:cover; object-position:center;"></div>
+                            <span class="text-[10px] font-extrabold text-blue-700 bg-blue-200/60 px-2.5 py-1 rounded-full uppercase">Audio Pathway</span>
+                            <h3 id="cms-m2-title" class="editable-text font-heading font-bold text-slate-900 text-lg">Podcast Path</h3>
+                            <p id="cms-m2-desc" class="editable-text text-xs text-slate-600 leading-relaxed">
+                                Ideal for auditory learners! Listen to radio-style podcasts where teachers explain searching using analogies like searching for books in the School Library.</p>
+                        </div>
+                        <ul class="text-xs text-slate-700 space-y-2 border-t border-blue-200/60 pt-3">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Library book story podcast</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Spoken algorithmic logic breakdowns</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Audio voice-note reflection tasks</li>
+                        </ul>
+                    </div>
+
+                    <!-- Game Card -->
+                    <div class="bg-emerald-50/50 rounded-3xl p-6 border-2 border-emerald-200 space-y-4 flex flex-col justify-between hover:shadow-lg transition-all">
+                        <div class="space-y-3">
+                            <div class="w-full mb-3 overflow-hidden rounded-2xl border border-slate-200 shadow-sm bg-white"><img src="assets/image_08.png" alt="Game pathway: student engaging with a learning game" class="w-full h-56 sm:h-64 object-cover object-center" loading="eager" style="display:block; width:100%; max-width:100%; object-fit:cover; object-position:center;"></div>
+                            <span class="text-[10px] font-extrabold text-emerald-700 bg-emerald-200/60 px-2.5 py-1 rounded-full uppercase">Game Pathway</span>
+                            <h3 id="cms-m3-title" class="editable-text font-heading font-bold text-slate-900 text-lg">Interactive Relic Quest Game</h3>
+                            <p id="cms-m3-desc" class="editable-text text-xs text-slate-600 leading-relaxed">
+                                Built for kinesthetic learners! Play through the quest. Click chest boxes to test why Binary Search takes far fewer steps than Linear Search.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-slate-700 space-y-2 border-t border-emerald-200/60 pt-3">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Interactive 7-chest puzzle game</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Live step counter &amp; score tracker</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Hands-on efficiency comparison</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CREATORS INTRODUCTION SECTION -->
+        <section id="creators" class="py-14 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span class="px-3.5 py-1 bg-amber-100 text-amber-900 text-xs font-bold rounded-full uppercase border border-amber-200">Educators &amp; Designers</span>
+                    <h2 id="cms-creator-title" class="editable-text font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
+                        Meet Your Class 9 ICT Educators
+                    </h2>
+                    <p id="cms-creator-desc" class="editable-text text-slate-600 text-sm leading-relaxed">
+                        Dedicated teachers from Samtse college of education working together to bring inclusive digital Technology and Innovation education to every classroom.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    
+                    <!-- Creator 1 -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center gap-5">
+                        <div class="drop-zone w-20 h-20 rounded-2xl overflow-hidden shrink-0 bg-slate-100" id="dropzone-creator1">
+                            <img id="cms-creator1-img" src="assets/image_09.png" alt="Tsheten Lhamo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-1">
+                            <h4 id="cms-c1-name" class="editable-text font-bold text-slate-900 text-base">Tsheten Lhamo&nbsp;</h4>
+                            <p id="cms-c1-role" class="editable-text text-xs text-blue-600 font-semibold">Developer and Teacher&nbsp;</p>
+                            <p id="cms-c1-bio" class="editable-text text-xs text-slate-500 leading-relaxed">
+                                "Every student in Bhutan has a unique learning rhythm. Our mission is making algorithms accessible to all."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Creator 2 -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center gap-5">
+                        <div class="drop-zone w-20 h-20 rounded-2xl overflow-hidden shrink-0 bg-slate-100" id="dropzone-creator2">
+                            <img id="cms-creator2-img" src="assets/image_10.png" alt="Sonam Choki" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-1">
+                            <h4 id="cms-c2-name" class="editable-text font-bold text-slate-900 text-base">Sonam Choki&nbsp;</h4>
+                            <p id="cms-c2-role" class="editable-text text-xs text-emerald-600 font-semibold">Audio lesson developer and Teacher&nbsp;</p>
+                            <p id="cms-c2-bio" class="editable-text text-xs text-slate-500 leading-relaxed">
+                                "Combining traditional storytelling with interactive games makes computer science exciting and easy to remember."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Creator 3: Editable profile placeholder -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-start gap-5">
+                        <div class="drop-zone w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100" id="dropzone-creator3">
+                            <img id="cms-creator3-img" src="assets/image_11.png" alt="Tshering Lhamo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-2 flex-1">
+                            <h4 id="cms-c3-name" class="editable-text font-bold text-slate-900 text-base">Tshering Lhamo</h4>
+                            <p id="cms-c3-role" class="editable-text text-xs text-blue-600 font-semibold">Visual lesson designer / educator</p>
+                            <p id="cms-c3-bio" class="editable-text text-xs text-slate-500 leading-relaxed">Visualizing and interacting with what you learn enhance your learning.</p>
+                        </div>
+                    </div>
+
+                    <!-- Creator 4: Editable profile placeholder -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-start gap-5">
+                        <div class="drop-zone w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100" id="dropzone-creator4">
+                            <img id="cms-creator4-img" src="assets/image_12.png" alt="Tshering Wangmo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-2 flex-1">
+                            <h4 id="cms-c4-name" class="editable-text font-bold text-slate-900 text-base">Tshering Wangmo</h4>
+                            <p id="cms-c4-role" class="editable-text text-xs text-emerald-600 font-semibold">Game-based lesson designer</p>
+                            <p id="cms-c4-bio" class="editable-text text-xs text-slate-500 leading-relaxed">Life is a challenge and fighting to learn—why not learn with game?</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: CONTACT INFORMATION SECTION -->
+        <section id="contact" class="py-14 bg-white border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    
+                    <!-- Contact Details -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase border border-blue-100">Get In Touch</span>
+                            <h2 id="cms-contact-title" class="editable-text font-heading text-2xl font-extrabold text-slate-900 mt-2">
+                                Contact Information
+                            </h2>
+                            <p id="cms-contact-sub" class="editable-text text-slate-600 text-xs sm:text-sm mt-1">
+                                Have questions about Class 9 ICT algorithms curriculum or need support with your PLE portal? Reach out to us!
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-4 text-xs text-slate-700">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-8 h-8 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-slate-900 font-bold">Email Support</strong>
+                                    <span id="cms-contact-email" class="editable-text">AlgoLearn@gmail.com</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-slate-900 font-bold">Phone Number</strong>
+                                    <span id="cms-contact-phone" class="editable-text">+975 02 321 456 / +975 05 252 111</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Message Form -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                            <h3 class="font-heading font-bold text-slate-900 text-lg">Send a Student or Teacher Feedback Message</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Your feedback will be prepared as an email to <strong>Algolearn-DTI@gmail.com</strong>. Your email app will open; press Send there to deliver it.</p>
+                            <form onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs">
+                                <div class="grid grid-cols-1 gap-4">
+                                    <div>
+                                        <label class="block font-bold text-slate-700 mb-1">Your Name</label>
+                                        <input type="text" required="" placeholder="e.g. Dawa Pem" class="w-full p-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-slate-700 mb-1">Your Email</label>
+                                    <input type="email" required="" placeholder="dawa@school.edu.bt" class="w-full p-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-slate-700 mb-1">Message or Question</label>
+                                    <textarea rows="4" required="" placeholder="Ask a question about Linear vs. Binary search or provide platform feedback..." class="w-full p-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                                </div>
+                                <button type="submit" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow flex items-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i> Send Feedback Message
+                                </button>
+                            </form>
+                            <div id="contact-msg-box" class="hidden p-3.5 bg-emerald-100 border border-emerald-300 text-emerald-800 font-bold rounded-xl text-xs"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+            <div class="flex justify-center items-center gap-2">
+                <div class="w-6 h-6 rounded-lg bg-amber-500 text-slate-900 flex items-center justify-center font-bold text-xs">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <span class="font-heading font-bold text-white text-xs">AlgoLearn • Class 9 DTI Curriculum</span>
+            </div>
+            <p id="cms-footer-text" class="editable-text text-slate-500 text-[11px]">
+                AlgoLearn | Algorithms and Data Structure Class 9 DTI Education | Class 9 DTI Curriculum 🇧🇹
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // CMS State Variable
+        let isAdmin = false;
+
+        // Toggle Admin CMS Mode else {
+                body.classList.remove('admin-mode');
+                roleBadge.className = "px-2.5 py-1 rounded-full font-bold bg-emerald-600 text-white flex items-center gap-1.5 shadow-sm";
+                roleBadge.innerHTML = '<i class="fa-solid fa-user-graduate"></i> Student Mode (Read-Only)';
+                
+                toggleBtn.className = "px-3.5 py-1 bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold rounded-lg transition-all shadow";
+                toggleBtn.innerHTML = '<i class="fa-solid fa-lock"></i> Enable Teacher Admin Mode';
+                
+                adminTools.classList.add('hidden');
+                adminTools.classList.remove('flex');
+
+                // Disable inline content editing
+                editables.forEach(el => el.setAttribute('contenteditable', 'false'));
+            }
+        }
+
+        // Drag and Drop File Handlers for Teacher Admin);
+
+                zone.addEventListener('dragleave', () => {
+                    zone.classList.remove('drag-over');
+                });
+
+                zone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    zone.classList.remove('drag-over');
+                    if (!isAdmin) {
+                        alert("Please enable Teacher Admin Mode to upload images!");
+                        return;
+                    }
+
+                    const files = e.dataTransfer.files;
+                    if (files.length > 0) {
+                        const file = files[0];
+                        const fileUrl = URL.createObjectURL(file);
+
+                        if (zone.id === 'dropzone-hero-img') {
+                            document.getElementById('cms-hero-img').src = fileUrl;
+                        } else if (zone.id === 'dropzone-creator1') {
+                            document.getElementById('cms-creator1-img').src = fileUrl;
+                        } else if (zone.id === 'dropzone-creator2') {
+                            document.getElementById('cms-creator2-img').src = fileUrl;
+                        } else if (zone.id === 'dropzone-creator3') {
+                            document.getElementById('cms-creator3-img').src = fileUrl;
+                        } else if (zone.id === 'dropzone-creator4') {
+                            document.getElementById('cms-creator4-img').src = fileUrl;
+                        }
+                    }
+                });
+            });
+        }
+
+        // Save Edits to LocalStorage Persistence);
+
+            // Save Image Sources
+            dataToSave['cms-hero-img-src'] = document.getElementById('cms-hero-img').src;
+            dataToSave['cms-creator1-img-src'] = document.getElementById('cms-creator1-img').src;
+            dataToSave['cms-creator2-img-src'] = document.getElementById('cms-creator2-img').src;
+            dataToSave['cms-creator3-img-src'] = document.getElementById('cms-creator3-img').src;
+            dataToSave['cms-creator4-img-src'] = document.getElementById('cms-creator4-img').src;
+
+            localStorage.setItem('bhutan_class9_home_cms_data', JSON.stringify(dataToSave));
+            alert("✅ All home page write-ups and teacher image slots saved successfully!");
+        }
+
+        // Restore Saved Edits from LocalStorage
+                if (data['cms-hero-img-src']) document.getElementById('cms-hero-img').src = data['cms-hero-img-src'];
+                if (data['cms-creator1-img-src']) document.getElementById('cms-creator1-img').src = data['cms-creator1-img-src'];
+                if (data['cms-creator2-img-src']) document.getElementById('cms-creator2-img').src = data['cms-creator2-img-src'];
+                if (data['cms-creator3-img-src']) document.getElementById('cms-creator3-img').src = data['cms-creator3-img-src'];
+                if (data['cms-creator4-img-src']) document.getElementById('cms-creator4-img').src = data['cms-creator4-img-src'];
+            } catch (err) {
+                console.error("Error restoring saved data", err);
+            }
+        }
+
+        // Reset to Default Template
+        }
+
+        // Learner Quiz Calculator
+        function calculateQuiz() {
+            const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+            const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+            const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+            const q4 = document.querySelector('input[name="q4"]:checked')?.value;
+
+            if (!q1 || !q2 || !q3 || !q4) {
+                alert("Please answer all 4 quiz questions to discover your pathway!");
+                return;
+            }
+
+            const counts = { visual: 0, audio: 0, game: 0 };
+            counts[q1]++; counts[q2]++; counts[q3]++; counts[q4]++;
+
+            const resultBox = document.getElementById('quiz-result-box');
+            resultBox.classList.remove('hidden', 'bg-amber-50', 'bg-blue-50', 'bg-emerald-50', 'border-amber-300', 'border-blue-300', 'border-emerald-300');
+
+            if (counts.visual >= counts.audio && counts.visual >= counts.game) {
+                resultBox.classList.add('bg-amber-50', 'border-amber-300');
+                resultBox.innerHTML = `
+                    <div class="text-amber-800 font-extrabold text-lg">🎨 You are a Visual Learner!</div>
+                    <p class="text-xs text-slate-600">You absorb concepts best through color-coded flowcharts, array diagrams, and animations.</p>
+                    <a href="#methods" class="inline-block mt-2 px-5 py-2.5 bg-amber-600 text-white font-bold rounded-xl text-xs shadow hover:bg-amber-700">Explore Visual Learning Path <i class="fa-solid fa-arrow-down ml-1"></i></a>
+                `;
+            } else if (counts.audio >= counts.visual && counts.audio >= counts.game) {
+                resultBox.classList.add('bg-blue-50', 'border-blue-300');
+                resultBox.innerHTML = `
+                    <div class="text-blue-800 font-extrabold text-lg">🎧 You are an Audio Learner!</div>
+                    <p class="text-xs text-slate-600">You excel by listening to spoken story podcasts, explanations, and radio episodes.</p>
+                    <a href="#methods" class="inline-block mt-2 px-5 py-2.5 bg-blue-600 text-white font-bold rounded-xl text-xs shadow hover:bg-blue-700">Explore Audio Learning Path <i class="fa-solid fa-arrow-down ml-1"></i></a>
+                `;
+            } else {
+                resultBox.classList.add('bg-emerald-50', 'border-emerald-300');
+                resultBox.innerHTML = `
+                    <div class="text-emerald-800 font-extrabold text-lg">🎮 You are a Game-Based / Kinesthetic Learner!</div>
+                    <p class="text-xs text-slate-600">You learn fastest through hands-on quests, chest puzzles, and trial-and-error.</p>
+                    <a href="#methods" class="inline-block mt-2 px-5 py-2.5 bg-emerald-600 text-white font-bold rounded-xl text-xs shadow hover:bg-emerald-700">Explore Game Learning Path <i class="fa-solid fa-arrow-down ml-1"></i></a>
+                `;
+            }
+        }
+
+        // Contact Form Submission Handler
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = form.querySelector('input[type="text"]')?.value.trim() || "Not provided";
+            const message = form.querySelector('textarea')?.value.trim() || "";
+            const recipient = "Algolearn-DTI@gmail.com";
+            const subject = encodeURIComponent("AlgoLearn Student/Teacher Feedback");
+            const body = encodeURIComponent("Name: " + name + "\n\nFeedback message:\n" + message);
+            const msgBox = document.getElementById('contact-msg-box');
+            msgBox.classList.remove('hidden');
+            msgBox.innerText = "Your email app should open with this feedback addressed to " + recipient + ". Press Send in your email app to deliver it.";
+            window.location.href = "mailto:" + recipient + "?subject=" + subject + "&body=" + body;
+        }
+
+        // Mobile Nav Drawer Toggle
+        function toggleMobileNav() {
+            document.getElementById('mobile-nav').classList.toggle('hidden');
+        }
+
+        // Initialize on Window Load
+        window.onload = function() {
+            loadSavedData();
+            setupDragAndDrop();
+        };
+    </script>
+
+</body></html>
