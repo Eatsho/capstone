@@ -95,50 +95,49 @@
     <!-- Mode Banner & Floating Controls Bar -->
     
 
-    <header class="bg-white border-b border-slate-100 shadow-sm sticky top-[41px] z-40 backdrop-blur-md bg-white/95">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                
-                <!-- Website Logo & Title -->
-                <a href="#hero" class="flex items-center gap-3 group">
-                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 via-blue-600 to-emerald-600 flex items-center justify-center text-white text-xl shadow-md group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                    <div>
-                        <span class="block font-heading font-extrabold text-lg sm:text-xl text-slate-900 group-hover:text-blue-600 transition-colors">
-                            AlgoLearn
-                        </span>
-                        <span class="block text-xs font-semibold text-amber-600 tracking-wider uppercase">Algorithms and Data Structure Class 9 DTI Education • Bhutan 🇧🇹</span>
-                    </div>
-                </a>
+   <header class="bg-white border-b border-slate-100 shadow-sm sticky top-[41px] z-40 backdrop-blur-md bg-white/95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="flex justify-end items-center h-20">
 
-                <!-- Navigation Bar -->
-                <nav class="hidden lg:flex items-center space-x-1 text-xs font-bold">
-                    <a href="#hero" class="px-3.5 py-2 text-blue-600 bg-blue-50 rounded-xl transition-all">Home</a>
-                    <a href="#quiz" class="px-3.5 py-2 text-slate-600 hover:text-amber-600 hover:bg-slate-50 rounded-xl transition-all">Learner Quiz</a>
-                    <a href="#ple" class="px-3.5 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-all">PLE Info</a>
-                    <a href="#methods" class="px-3.5 py-2 text-slate-600 hover:text-emerald-600 hover:bg-slate-50 rounded-xl transition-all">Learning Methods</a>
-                    <a href="#creators" class="px-3.5 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-all">Creators</a>
-                    <a href="#contact" class="px-3.5 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-all">Contact</a>
-                </nav>
+            <!-- Centered Website Logo and Title -->
+            <a href="#hero"
+               class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center gap-3 group">
 
-                <!-- Mobile Navigation Button -->
-                <button onclick="toggleMobileNav()" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
-            </div>
+                <!-- Logo -->
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 via-blue-600 to-emerald-600 flex items-center justify-center text-white text-xl shadow-md group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <!-- Website Name and Subtitle -->
+                <div>
+                    <span class="block font-heading font-extrabold text-lg sm:text-xl text-slate-900 group-hover:text-blue-600 transition-colors">
+                        AlgoLearn
+                    </span>
+                    <span class="block text-xs font-semibold text-amber-600 tracking-wider uppercase">
+                        Algorithms and Data Structure Class 9 DTI Education • Bhutan 🇧🇹
+                    </span>
+                </div>
+            </a>
+
+            <!-- Mobile Navigation Button -->
+            <button onclick="toggleMobileNav()"
+                    class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+
         </div>
+    </div>
 
-        <!-- Mobile Navigation Drawer -->
-        <div id="mobile-nav" class="hidden lg:hidden border-b border-slate-100 bg-white px-4 py-4 space-y-2 text-sm font-semibold">
-            <a href="#hero" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-blue-600 bg-blue-50">Home</a>
-            <a href="#quiz" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Learner Quiz</a>
-            <a href="#ple" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">PLE Info</a>
-            <a href="#methods" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Learning Methods</a>
-            <a href="#creators" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Creators</a>
-            <a href="#contact" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Contact</a>
-        </div>
-    </header>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden lg:hidden border-b border-slate-100 bg-white px-4 py-4 space-y-2 text-sm font-semibold">
+        <a href="#hero" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-blue-600 bg-blue-50">Home</a>
+        <a href="#quiz" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Learner Quiz</a>
+        <a href="#ple" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">PLE Info</a>
+        <a href="#methods" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Learning Methods</a>
+        <a href="#creators" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Creators</a>
+        <a href="#contact" onclick="toggleMobileNav()" class="block px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50">Contact</a>
+    </div>
+</header>
 
     <main class="flex-grow">
         
@@ -700,7 +699,7 @@
             const form = event.target;
             const name = form.querySelector('input[type="text"]')?.value.trim() || "Not provided";
             const message = form.querySelector('textarea')?.value.trim() || "";
-            const recipient = "Algolearn-DTI@gmail.com";
+            const recipient = "algolearn15@gmail.com";
             const subject = encodeURIComponent("AlgoLearn Student/Teacher Feedback");
             const body = encodeURIComponent("Name: " + name + "\n\nFeedback message:\n" + message);
             const msgBox = document.getElementById('contact-msg-box');
